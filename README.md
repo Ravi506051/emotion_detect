@@ -118,3 +118,9 @@ Add an appropriate open-source license if you intend to distribute this project.
 Evaluate the model on images that were not used during model development and inspect performance across all seven output classes. Face detection and emotion classification can be affected by lighting, pose, occlusion, image quality, and dataset bias. Record the model version and preprocessing steps when comparing results.
 
 Facial-expression labels are uncertain model outputs and should not be treated as reliable evidence of a person's internal emotional state or used for consequential decisions.
+
+## Project Development Notes
+
+Validate generated analysis against direct pandas calculations. Restrict generated code execution, use isolated environments, and require review before external side effects.
+
+For reproducibility, record source versions, environment and dependency versions, configuration, and actual test outputs. Clearly label sample data and illustrative results; never commit secrets or private data.
