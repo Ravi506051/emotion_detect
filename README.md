@@ -124,3 +124,9 @@ Facial-expression labels are uncertain model outputs and should not be treated a
 Validate generated analysis against direct pandas calculations. Restrict generated code execution, use isolated environments, and require review before external side effects.
 
 For reproducibility, record source versions, environment and dependency versions, configuration, and actual test outputs. Clearly label sample data and illustrative results; never commit secrets or private data.
+
+### Technical Deep Dive
+
+The image pipeline should use a consistent face detector, crop/resize procedure, color-channel convention, and normalization that match the selected DeepFace model. Keep detection confidence separate from expression-classification scores, and evaluate each of the seven labels on held-out images. A webcam loop should process frames asynchronously or at a controlled frame rate so inference does not freeze the UI.
+
+Suggested engineering checks: test no-face and multiple-face frames, release the camera on exit, avoid saving frames by default, and obtain consent before processing or storing identifiable images. Expression labels are uncertain outputs, not proof of a person's internal emotional state.
