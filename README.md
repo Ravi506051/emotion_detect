@@ -112,3 +112,9 @@ GitHub: [Ravi506051](https://github.com/Ravi506051)
 ## 📄 License
 
 Add an appropriate open-source license if you intend to distribute this project.
+
+## Evaluation and Usage Notes
+
+Evaluate the model on images that were not used during model development and inspect performance across all seven output classes. Face detection and emotion classification can be affected by lighting, pose, occlusion, image quality, and dataset bias. Record the model version and preprocessing steps when comparing results.
+
+Facial-expression labels are uncertain model outputs and should not be treated as reliable evidence of a person's internal emotional state or used for consequential decisions.
