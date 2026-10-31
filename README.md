@@ -138,3 +138,11 @@ Suggested engineering checks: test no-face and multiple-face frames, release the
 - Record the model version, face detector, preprocessing, and class mapping used for each experiment.
 - A facial-expression classifier estimates visible expression patterns; it cannot reliably determine a person's internal emotional state.
 - Obtain appropriate consent before processing or storing face images, and avoid retaining identifiable images unnecessarily.
+
+## Computer Vision Evaluation Notes
+
+- Keep training, validation, and test subjects separated where possible to reduce identity leakage.
+- Apply consistent face detection, alignment, resizing, and normalization during training and inference.
+- Report per-class precision, recall, F1-score, and a confusion matrix rather than relying only on accuracy.
+- Test performance across lighting conditions, camera quality, pose, occlusion, and demographic variation where the dataset permits.
+- Emotion labels are model predictions, not reliable evidence of a person's internal emotional state; use the system only for appropriate, consent-based demonstrations.
