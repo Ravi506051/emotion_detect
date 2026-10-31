@@ -130,3 +130,11 @@ For reproducibility, record source versions, environment and dependency versions
 The image pipeline should use a consistent face detector, crop/resize procedure, color-channel convention, and normalization that match the selected DeepFace model. Keep detection confidence separate from expression-classification scores, and evaluate each of the seven labels on held-out images. A webcam loop should process frames asynchronously or at a controlled frame rate so inference does not freeze the UI.
 
 Suggested engineering checks: test no-face and multiple-face frames, release the camera on exit, avoid saving frames by default, and obtain consent before processing or storing identifiable images. Expression labels are uncertain outputs, not proof of a person's internal emotional state.
+
+## Evaluation, Privacy, and Responsible Use
+
+- Evaluate on images not used during model development and report per-class precision, recall, F1-score, and a confusion matrix.
+- Test varied lighting, camera angles, face sizes, occlusion, and image quality.
+- Record the model version, face detector, preprocessing, and class mapping used for each experiment.
+- A facial-expression classifier estimates visible expression patterns; it cannot reliably determine a person's internal emotional state.
+- Obtain appropriate consent before processing or storing face images, and avoid retaining identifiable images unnecessarily.
