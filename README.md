@@ -146,3 +146,10 @@ Suggested engineering checks: test no-face and multiple-face frames, release the
 - Report per-class precision, recall, F1-score, and a confusion matrix rather than relying only on accuracy.
 - Test performance across lighting conditions, camera quality, pose, occlusion, and demographic variation where the dataset permits.
 - Emotion labels are model predictions, not reliable evidence of a person's internal emotional state; use the system only for appropriate, consent-based demonstrations.
+
+## Robustness, Privacy, and Evaluation
+
+- Evaluate on images that were not used for training or model selection, and report per-class precision, recall, F1-score, and a confusion matrix.
+- Test different lighting, camera angles, occlusion, image quality, and face sizes.
+- Treat expression labels as uncertain model outputs; they do not reliably reveal a person's internal emotional state.
+- Process images with consent, avoid retaining identifiable face data unnecessarily, and document the model and preprocessing versions.
