@@ -46,3 +46,10 @@ Add live webcam inference, latency measurement, robust face tracking and clear u
 ## Portfolio Context
 
 This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
+
+## Robustness, Bias, and Responsible Interpretation
+
+- Evaluate face detection separately from expression classification so failures can be diagnosed.
+- Test variation in lighting, pose, image quality, and face size, and report where performance degrades.
+- Facial-expression labels are uncertain model estimates and should not be treated as reliable evidence of a person's internal emotional state.
+- Avoid consequential decisions based on these predictions and document model and dataset limitations.
